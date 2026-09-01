@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <!-- Google Fonts (Fraunces: 700 | Montserrat: 500, 700 ) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>Frontend Mentor | Product preview card component</title>
+  </head>
+  <body>
+    <main>
+      <article class="product">
+        <picture class="product__img">
+          <!-- Used when screen is > 767px -->
+          <source
+            media="(min-width:767px)"
+            srcset="/images/image-product-desktop.jpg"
+          />
+
+          <!-- Used on mobile screens by default -->
+          <img src="./images/image-product-mobile.jpg" alt="" />
+        </picture>
+
+        <div class="product__content">
+          <p class="product__category">Perfume</p>
+          <h1 class="product__name">Gabrielle Essence Eau De Parfum</h1>
+          <p class="product__description">
+            A floral, solar and voluptuous interpretation composed by Olivier
+            Polge, Perfumer-Creator for the House of CHANEL.
+          </p>
+
+          <div class="product__price">
+            <strong class="product__price product__price--current"
+              >$149.99</strong
+            >
+            <del class="product__price product__price--old">$169.99</del>
+          </div>
+
+          <a href="#" class="product__btn">
+            <img
+              src="./images/icon-cart.svg"
+              alt="cart icon"
+              class="product__btn-icon"
+            />
+            <span class="product__btn-text">Add to cart</span>
+          </a>
+        </div>
+      </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </footer>
+  </body>
+</html>
