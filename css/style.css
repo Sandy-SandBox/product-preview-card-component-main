@@ -18,7 +18,7 @@
   --fs-lg: 1.75rem;
   --fs-md: 1.25rem;
   --fs-d: 1rem;
-  --fs-sm: 0.875rem;
+  --fs-sm: 12px;
 
   /* Space */
   --base-size: 0.25rem;
@@ -72,6 +72,7 @@ a:visited {
 body {
   font-family: var(--ff-body);
   font-weight: var(--fw-400);
+  font-size: var(--fs-d);
   background-color: var(--clr-cream);
   min-height: 100vh;
 
@@ -103,7 +104,7 @@ main {
 */
 
 .product {
-  width: min(calc(100% - var(--space-8)), 40.625rem);
+  width: min(calc(100% - var(--space-8)), 37.5rem);
   margin-block: var(--space-10);
   border-radius: 0.5rem;
   overflow: hidden;
@@ -111,7 +112,7 @@ main {
 }
 
 .product__content {
-  padding: var(--space-8) clamp(var(--space-4), 2vw + 1rem, var(--space-7));
+  padding: var(--space-8) clamp(var(--space-4), 2vw + 1rem, var(--space-6));
   color: var(--clr-grey);
 }
 
@@ -119,7 +120,7 @@ main {
   font-size: var(--fs-sm);
   text-transform: uppercase;
   letter-spacing: 8px;
-  margin-block-end: var(--space-6);
+  margin-block-end: var(--space-4);
 }
 
 .product__name {
@@ -128,35 +129,35 @@ main {
   font-weight: var(--fw-700);
   line-height: 1.1;
 
-  margin-block-end: var(--space-6);
+  margin-block-end: var(--space-4);
 }
 
 .product__description {
   line-height: 1.6;
-  color: var(--fs-md);
-  margin-block-end: var(--space-10);
+  margin-block-end: var(--space-6);
 }
 
 .product__prices {
   display: flex;
   align-items: center;
   gap: var(--space-4);
-  margin-bottom: var(--space-6);
+  margin-bottom: var(--space-4);
   font-family: var(--ff-heading);
 }
 .product__price {
   font-weight: var(--fw-700);
 }
 .product__price--current {
-  font-size: var(--fs-xl);
+  font-size: var(--fs-lg);
   color: var(--clr-primary);
 }
 .product__price--old {
+  font-size: var(--fs-d);
   color: var(--clr-grey);
 }
 
 .product__btn {
-  padding: var(--space-4) var(--space-8);
+  padding: var(--space-3) var(--space-6);
   background-color: var(--clr-primary);
   border-radius: 0.375rem;
   display: flex;
@@ -179,11 +180,13 @@ main {
   .product {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    align-content: center;
+    max-height: 27.8rem;
   }
 
   .product__content {
     display: grid;
-    align-items: center;
+    /* align-items: center; */
   }
 
   .product__img img {
