@@ -79,6 +79,12 @@ body {
   grid-template-rows: 1fr auto;
 }
 
+h1,
+h2,
+h3 {
+  font-family: var(--ff-heading);
+}
+
 footer {
   padding: var(--space-4);
   font-size: var(--fs-sm);
@@ -97,7 +103,7 @@ main {
 */
 
 .product {
-  width: min(calc(100% - var(--space-8)), 43.75rem);
+  width: min(calc(100% - var(--space-8)), 40.625rem);
   margin-block: var(--space-10);
   border-radius: 0.5rem;
   overflow: hidden;
@@ -136,6 +142,7 @@ main {
   align-items: center;
   gap: var(--space-4);
   margin-bottom: var(--space-6);
+  font-family: var(--ff-heading);
 }
 .product__price {
   font-weight: var(--fw-700);
@@ -177,5 +184,9 @@ main {
   .product__content {
     display: grid;
     align-items: center;
+  }
+
+  .product__img img {
+    height: 100%;
   }
 }
